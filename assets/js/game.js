@@ -47,12 +47,12 @@ var fight = function (enemyName) {
             //leave while() loop since enemy is dead
             break;
         }   else {
-            window.alert(enemyNames + " still has " + enemyHealth + " health left.");
+            window.alert(enemyName + " still has " + enemyHealth + " health left.");
         }
     
         // remove player's health by subtracting the amount set in the enemyAttack variable
         playerHealth = playerHealth - enemyAttack;
-        console.log(enemyNames + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining.");
+        console.log(enemyName + " attacked " + playerName + ". " + playerName + " now has " + playerHealth + " health remaining.");
     
         //check player's health
         if(playerHealth <= 0) {
@@ -66,7 +66,7 @@ var fight = function (enemyName) {
 };        
 
 // fight each enemy-robot by looping over them and fighting them one at a time
-for( var i =0; i < enemyNames.length; i++){
+for(var i = 0; i < enemyNames.length; i++){
     //if player is still alive, keep fighting
     if  (playerHealth > 0){
         //let players know what round they are in, remember that arrays start at 0 so it needs to have 1 added to it
