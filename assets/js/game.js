@@ -64,8 +64,22 @@ var fight = function () {
     }
 };
 
-
-// run fight function to start game
 for (var i = 0; i < enemyName.length; i++) {
+    debugger;
+    // call fight function with enemy-robot
     fight(enemyName[i]);
 }
+// run fight function to start game
+var fight = function(enemyName){
+    // repeat and execute as long as the enemy-robot is alive
+    while(enemyHealth > 0){
+        for (var i = 0; i < enemyName.length; i++) {
+            var pickedEnemyName = enemyName [i];
+            enemyHealth = 50;
+            fight(pickedEnemyName);
+        }
+    }
+    
+}
+
+
